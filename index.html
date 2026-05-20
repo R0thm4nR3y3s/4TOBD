@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engine Educativo Premium V2</title>
+  <link rel="stylesheet" href="engine/theme.css">
+</head>
+<body>
+
+  <!-- CAPA DE EFECTOS INDEPENDIENTE: NO TOCA EL CONTENIDO -->
+  <div id="fxLayer" class="fx-layer">
+    <canvas id="matrixCanvas"></canvas>
+    <canvas id="atomsCanvas"></canvas>
+    <div id="bubblesLayer"></div>
+    <div id="formulasLayer"></div>
+    <div id="tetrisLayer"></div>
+  </div>
+
+  <!-- CAPA DE SEGURIDAD -->
+  <section id="accessOverlay" class="access-overlay">
+    <div class="access-card">
+      <div class="access-badge">SECURE CLASSROOM MODE</div>
+      <h1>Acceso a clase</h1>
+      <p>Ingresa el token temporal proporcionado por el profesor.</p>
+      <input id="tokenInput" type="password" placeholder="TOKEN TEMPORAL" autocomplete="off">
+      <button id="btnValidate">INGRESAR</button>
+      <div id="accessError" class="access-error"></div>      
+    </div>
+  </section>
+
+  <!-- PANEL PRIVADO DEL PROFESOR -->
+  <section id="teacherPanel" class="teacher-panel hidden">
+    <div class="panel-top">
+      <h2>Panel privado del profesor</h2>
+      <button id="btnClosePanel">×</button>
+    </div>
+
+    <label>Contraseña maestra</label>
+    <input id="teacherPass" type="password" placeholder="Contraseña del profesor">
+    <button id="btnUnlockTeacher">DESBLOQUEAR PANEL</button>
+
+    <div id="teacherTools" class="hidden">
+      <div class="mini-status secure">SECURE MODE ENABLED</div>
+
+      <label>Token actual</label>
+      <div id="tokenView" class="token-view"></div>
+
+      <label>Expira</label>
+      <div id="tokenExpires" class="token-view"></div>
+
+      <label>Duración nuevo token</label>
+      <select id="durationSelect">
+        <option value="30">30 minutos</option>
+        <option value="60">1 hora</option>
+        <option value="120" selected>2 horas</option>
+        <option value="240">4 horas</option>
+        <option value="1440">1 día</option>
+      </select>
+
+      <button id="btnGenerateToken">GENERAR TOKEN LOCAL</button>
+      <button id="btnCopyToken">COPIAR TOKEN</button>
+      <button id="btnInvalidateToken" class="danger">INVALIDAR TOKEN LOCAL</button>
+
+      <p class="note">
+        El contenido, la seguridad y los efectos están separados. Puedes cambiar escenas sin tocar el motor.
+      </p>
+    </div>
+  </section>
+
+  <!-- CAPA UI GLOBAL -->
+  <header class="topbar">
+    <div>
+      <h1 id="sceneTitle">Engine Educativo</h1>
+      <p id="sceneSubtitle">Dashboard visual premium</p>
+    </div>
+
+    <div id="sceneMenu" class="scene-menu"></div>
+    <div class="teacher-pill">PROFESOR: R0thm4n R3y3s</div>
+  </header>
+
+  <nav id="navPills" class="nav-pills"></nav>
+  
+
+  <!-- ÁREA SEGURA DEL CONTENIDO: SIEMPRE ESTABLE -->
+  <main class="safe-shell">
+    <section id="stage" class="stage"></section>
+  </main>
+
+  <!-- WIDGETS FLOTANTES MOVIBLES -->
+  <aside id="fxWidget" class="fx-widget">
+    <div class="fx-widget-head" id="fxWidgetHead">
+      <strong>FX Manager</strong>
+      <button id="btnMinimizeFx">—</button>
+    </div>
+
+    <div class="fx-widget-body" id="fxWidgetBody">
+      <button id="btnMatrix">Matrix</button>
+      <button id="btnAtoms">Átomos</button>
+      <button id="btnBubbles">Burbujas</button>
+      <button id="btnFormulas">Fórmulas</button>
+      <button id="btnTetris">Tetris</button>
+      <button id="btnPauseFx">Pausar</button>
+      <button id="btnPresentation">Presentación</button>
+      <button onclick="applyTheme('cyber')">
+        CYBER
+        </button>
+        
+        <button onclick="applyTheme('matrix')">
+        MATRIX
+        </button>
+        
+        <button onclick="applyTheme('quantum')">
+        QUANTUM
+        </button>
+        
+        <button onclick="applyTheme('fire')">
+        FIRE
+        </button>
+        
+        <button onclick="applyTheme('hologram')">
+        HOLOGRAM
+        </button>
+      <label>Opacidad FX</label>
+      <input id="fxOpacity" type="range" min="0" max="40" value="16">
+    </div>
+  </aside>
+
+  <script src="tokens/tokens.js"></script>
+ <!--<script src="scenes/bd_u1_1.js"></script> -->
+ <!--<script src="scenes/bd_u1_2.js"></script>-->
+   <!--<script src="scenes/bd_u2_1.js"></script>-->
+  <!--<script src="scenes/bd_u2_2.js"></script>-->
+ <!--<script src="scenes/bd_u2_permisos.js"></script>-->
+  
+  
+
+
+
+  <script src="engine/security.js"></script>
+  <script src="engine/highlighter.js"></script>
+  <script src="engine/components.js"></script>
+  <script src="engine/renderer.js"></script>
+  <script src="engine/effects-layer.js"></script>
+  <script src="engine/floating-widgets.js"></script>
+  <script src="engine/themes.js"></script>
+  <script src="engine/engine.js"></script>
+</body>
+</html>
