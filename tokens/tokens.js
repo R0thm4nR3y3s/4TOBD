@@ -2,7 +2,7 @@ window.TOKEN_SYSTEM = {
   // Password del panel profesor:
   // CTRL + ALT + P
   // Password: 1234
-  masterPassword: "}]b51Sk&o7pU",
+  masterPassword: "RAR2410",
 
   tokens: [
     {
