@@ -6,8 +6,8 @@ window.TOKEN_SYSTEM = {
 
   tokens: [
     {
-      value: "BD#$%2026?¡@_",
-      expires: "2026-05-01T23:59:59",
+      value: "25052026-R0thm4n$",
+      expires: "2026-05-25T23:59:59",
       active: true
     }
   ]
