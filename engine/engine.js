@@ -42,7 +42,10 @@ const SCENE_FILES = [
     name: "BD U2.1",
     file: "scenes/bd_u2_1.js"
   },
-
+  {
+    name: "BD U2.Roles",
+    file: "scenes/bd_u2_roles.js"
+  },
   {
     name: "BD U2.2",
     file: "scenes/bd_u2_2.js"
