@@ -7,7 +7,7 @@ window.TOKEN_SYSTEM = {
   tokens: [
     {
       value: "2410-4lv4r4d0P4p4",
-      expires: "2026-05-25T23:59:59",
+      expires: "2026-05-27T23:59:59",
       active: true
     }
   ]
